@@ -1,32 +1,44 @@
-= Mój Projekt
+= Demo AsciiDoc vs Markdown
 Jan Kowalski
 :toc:
 :icons: font
 
-== Wstęp
+== 👋 Wstęp
 
-To jest *kursywa*, a to jest **pogrubienie**.
+Ten dokument pokazuje funkcje, których *Markdown nie obsługuje lub obsługuje słabo*.
 
-Możesz też używać `kodu inline`.
+== 📚 Spis treści (TOC)
 
-== Lista
+NOTE: Ten spis treści powstał automatycznie dzięki `:toc:` (Markdown tego NIE ma bez pluginów).
 
-* Element 1
-* Element 2
-** Pod-element 2.1
-** Pod-element 2.2
+== ⚠️ Bloki specjalne (brak w Markdown)
 
-== Lista numerowana
+TIP: To jest wskazówka (Markdown nie ma natywnych bloków TIP).
 
-. Pierwszy
-. Drugi
-. Trzeci
+WARNING: To jest ostrzeżenie (w Markdown trzeba kombinować z emoji lub cytatem).
 
-== Linki
+IMPORTANT: To jest ważna informacja z semantyką.
 
-Link do GitHuba: https://github.com
+== 🧾 Metadane dokumentu
 
-== Kod
+NOTE: Autor i tytuł na górze pliku to część składni AsciiDoc (Markdown tego nie wspiera).
+
+== 📋 Zaawansowana tabela
+
+[cols="1,2", options="header"]
+|===
+| Nazwa | Opis
+
+| A
+| Możemy kontrolować szerokość kolumn
+
+| B
+| Możliwe są bardziej zaawansowane opcje niż w Markdown
+|===
+
+NOTE: Markdown ma bardzo ograniczone tabele (brak stylów, colspan itd.).
+
+== 💻 Blok kodu z opcjami
 
 [source,python]
 ----
@@ -34,28 +46,25 @@ def hello():
     print("Hello, world!")
 ----
 
-== Obraz
+NOTE: W AsciiDoc można dodać opcje (np. numerowanie linii). Markdown tego nie wspiera natywnie.
 
-image::https://via.placeholder.com/150[Przykładowy obraz]
+== 🖼️ Obraz z kontrolą
 
-== Tabela
+image::https://via.placeholder.com/150[Przykład, width=100]
 
-|===
-| Nazwa | Wartość
+NOTE: Możemy ustawić np. szerokość — w Markdown brak takich opcji.
 
-| A
-| 10
+== 🔽 Zagnieżdżone listy (bardziej czytelne)
 
-| B
-| 20
-|===
+* Element 1
+** Pod-element 1.1
+*** Pod-element 1.1.1
 
-== Cytat
+NOTE: W Markdown zagnieżdżenia zależą od spacji i często się psują.
 
-> To jest cytat.
+== 🔗 Podsumowanie
 
-== Sekcja z ikoną
+IMPORTANT: AsciiDoc (np. przez Asciidoctor) to bardziej zaawansowany system dokumentacji niż Markdown.
 
-TIP: To jest wskazówka.
-
-WARNING: To jest ostrzeżenie.
+* Markdown → prosty, szybki
+* AsciiDoc → bardziej rozbudowany i konfigurowalny
