@@ -1,0 +1,61 @@
+= Mój Projekt
+Jan Kowalski
+:toc:
+:icons: font
+
+== Wstęp
+
+To jest *kursywa*, a to jest **pogrubienie**.
+
+Możesz też używać `kodu inline`.
+
+== Lista
+
+* Element 1
+* Element 2
+** Pod-element 2.1
+** Pod-element 2.2
+
+== Lista numerowana
+
+. Pierwszy
+. Drugi
+. Trzeci
+
+== Linki
+
+Link do GitHuba: https://github.com
+
+== Kod
+
+[source,python]
+----
+def hello():
+    print("Hello, world!")
+----
+
+== Obraz
+
+image::https://via.placeholder.com/150[Przykładowy obraz]
+
+== Tabela
+
+|===
+| Nazwa | Wartość
+
+| A
+| 10
+
+| B
+| 20
+|===
+
+== Cytat
+
+> To jest cytat.
+
+== Sekcja z ikoną
+
+TIP: To jest wskazówka.
+
+WARNING: To jest ostrzeżenie.
