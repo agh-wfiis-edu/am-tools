@@ -13,11 +13,27 @@ NOTE: Ten spis treści powstał automatycznie dzięki `:toc:` (Markdown tego NIE
 
 == ⚠️ Bloki specjalne (brak w Markdown)
 
-TIP: To jest wskazówka (Markdown nie ma natywnych bloków TIP).
+[NOTE]
+====
+To jest blok NOTE.
 
-WARNING: To jest ostrzeżenie (w Markdown trzeba kombinować z emoji lub cytatem).
+Może zawierać wiele linii, formatowanie i inne elementy.
+====
 
-IMPORTANT: To jest ważna informacja z semantyką.
+[TIP]
+====
+To jest blok TIP z większą ilością treści.
+
+* lista
+* elementów
+====
+
+[WARNING]
+====
+To jest blok WARNING — semantyczny, nie tylko wizualny.
+====
+
+IMPORTANT: To jest skrócona forma (inline), ale powyżej masz pełne bloki.
 
 == 🧾 Metadane dokumentu
 
@@ -40,13 +56,16 @@ NOTE: Markdown ma bardzo ograniczone tabele (brak stylów, colspan itd.).
 
 == 💻 Blok kodu z opcjami
 
-[source,python]
+[source,python,linenums]
 ----
 def hello():
     print("Hello, world!")
+
+def add(a, b):
+    return a + b
 ----
 
-NOTE: W AsciiDoc można dodać opcje (np. numerowanie linii). Markdown tego nie wspiera natywnie.
+NOTE: Numerowanie linii (`linenums`) to natywna opcja — Markdown tego nie wspiera bez rozszerzeń.
 
 == 🖼️ Obraz z kontrolą
 
