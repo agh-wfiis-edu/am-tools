@@ -1,0 +1,86 @@
+= Dokumentacja API
+Jan Kowalski
+:toc:
+:icons: font
+:source-highlighter: rouge
+
+== 📌 Wprowadzenie
+
+[abstract]
+To jest streszczenie dokumentu — specjalny blok (Markdown tego nie ma).
+
+== 🔧 Konfiguracja
+
+[source,yaml,linenums]
+----
+server:
+  port: 8080
+database:
+  host: localhost
+----
+
+== ⚠️ Ważne informacje
+
+[WARNING]
+====
+Ten system nie obsługuje jeszcze autoryzacji OAuth.
+
+Możliwe skutki:
+
+* brak bezpieczeństwa
+* dostęp publiczny
+====
+
+== 📦 Endpoint API
+
+.Endpoint: GET /users
+[%collapsible]
+====
+Zwraca listę użytkowników.
+
+[source,json]
+----
+[
+  { "id": 1, "name": "Jan" }
+]
+----
+====
+
+== 📊 Tabela z zaawansowanym formatowaniem
+
+[cols="1,2,2", options="header"]
+|===
+| Endpoint | Metoda | Opis
+
+| /users
+| GET
+| Pobiera listę użytkowników
+
+| /users
+| POST
+| Tworzy użytkownika
+|===
+
+== 🧩 Include (dzielenie dokumentacji)
+
+include::partials/auth.adoc[]
+
+NOTE: Możemy dzielić dokumentację na pliki (Markdown tego nie wspiera natywnie).
+
+== 🔀 Warunkowa treść
+
+ifdef::backend-html5[]
+To widać tylko w HTML.
+endif::[]
+
+ifndef::backend-html5[]
+To widać np. w PDF.
+endif::[]
+
+== 🔗 Atrybuty (reusable content)
+
+:api-url: https://api.example.com
+
+API dostępne pod: {api-url}
+
+NOTE: Jedno miejsce zmiany — wiele użyć.
